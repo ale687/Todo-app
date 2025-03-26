@@ -1,6 +1,8 @@
-salir
-pintar
-cocinar pizz
-cocinar pasta
-clean baño
-estudiar
+cleancocinar pasta
+cleanpintar
+escribir
+limpiar casacocinar
+correr
+saltar
+entrenar
+hacer la comida
