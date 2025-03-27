@@ -1,6 +1,0 @@
-[{"pregunta": "Que son los delfines?", 
-  "respuestas": ["anfibios", "pescado", "mamifero", "ave"], 
-  "respuesta_correcta": 3},
-{"pregunta": "Que ocupa la mayor parte de la superficie de la tierra?", 
-  "respuestas": ["tierra", "agua"], 
-  "respuesta_correcta": 2}]
