@@ -6,14 +6,15 @@ def get_todos(filepath=FILEPATH):
     tareas pendientes.
     """
     with open(filepath,"r") as file_local:
-            todos_local = file_local.readlines()
-    return todos_local
+        return [line.strip() for line in file_local.readlines()]
+   #         todos_local = file_local.readlines()
+    #return todos_local.strip()
  
  
 def write_todos(todos_arg , filepath=FILEPATH):
     """ Escribe en la lista de tareas pendientes en el archivo de texto."""
     with open(filepath, "w") as file:
-            file.writelines(todos_arg)
+            file.writelines([todo + "\n" for todo in todos_arg])
  
  
 if __name__ == "__main__":

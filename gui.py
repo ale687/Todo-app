@@ -28,15 +28,15 @@ while True:
     match event:
         case "Add":
             todos = funciones.get_todos()
-            new_todo = values['todo'] + "\n"
+            new_todo = values['todo'].strip()
             todos.append(new_todo)
             funciones.write_todos(todos)
             window['todos'].update(values=todos)
-            
+            window["todo"].update(value="") 
         case "Edit":
             try:
-                todo_to_edit = values["todos"][0]
-                new_todo = values["todo"]
+                todo_to_edit = values["todos"][0].strip()
+                new_todo = values["todo"].strip()
                 
                 todos = funciones.get_todos()
                 index = todos.index(todo_to_edit)
@@ -52,13 +52,13 @@ while True:
                 todos.remove(todo_to_complete)
                 funciones.write_todos(todos)
                 window["todos"].update(values=todos)
-                window["todo"].update(values=" ")
+                window["todo"].update(value="")
             except IndexError:
                  sg.popup("Please select an item first.", font=("Helvetica",15))
         case "Exit":
             break
         case "todos": 
-            window['todo'].update(value=values['todos'][0])
+            window['todo'].update(value=values['todos'][0].strip())
         case sg.WIN_CLOSED:
             break
 
